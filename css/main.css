@@ -7,7 +7,6 @@
   /* The image used */
   background-image: url("https://s3-alpha-sig.figma.com/img/1410/e34e/2f934c92f148ef7e91436af93e6dec0d?Expires=1661126400&Signature=ABf7~aXsH37KyvwIRftt3Atl-gHZu~b5eofrD7J8LCq~7~~a-fhFiL3hpJk~B4Nn4i-NDIxQfaKAzMHsbNdxNvt3GUB-SHSW0HK7SCECw~Q8v9kNPXuxR78F~18G0l8oI53c04eQwzL5mT5sDWxuiB9bwshWVoiF~pcj9pn7ZF0epltTkwW9kpauFWrneAzY~SbPMlHSwysFrdeQ42oxTv8~KYhmBbC9Ue9RO~Ytm5VDt6uLqf4Ayy1I~6Vtb91OlxqO85UOR1wv9qKzQb13CkiNHIUEDDaRUbjdpZYehCy9aj6qtYVaVHCYykMWXLiN5SdHodNQsdx9O0Smu30haQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
 
-  min-height: 960px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -36,12 +35,16 @@
 }
 
 /* The navbar */
-.topnav {
+#topnav {
   overflow: hidden;
 }
 
+#topnav .contact-us{
+  padding-right: 97px;
+}
+
 /* Navbar links */
-.topnav a {
+#topnav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -51,9 +54,10 @@
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
+  padding-right: 55px;
   }
 
-.topnav a:hover {
+#topnav a:hover {
   background-color: #ddd;
   color: black;
 }
@@ -63,6 +67,11 @@
   margin: 0;
   padding: 0;
 }
+
+.downloadcat button{
+  display: none;
+}
+
 
 .picture {
   background-color: #383838; 
@@ -466,7 +475,7 @@ input, label {
   .bg-img {
     /* The image used */
     background-image: url("https://s3-alpha-sig.figma.com/img/1410/e34e/2f934c92f148ef7e91436af93e6dec0d?Expires=1661126400&Signature=ABf7~aXsH37KyvwIRftt3Atl-gHZu~b5eofrD7J8LCq~7~~a-fhFiL3hpJk~B4Nn4i-NDIxQfaKAzMHsbNdxNvt3GUB-SHSW0HK7SCECw~Q8v9kNPXuxR78F~18G0l8oI53c04eQwzL5mT5sDWxuiB9bwshWVoiF~pcj9pn7ZF0epltTkwW9kpauFWrneAzY~SbPMlHSwysFrdeQ42oxTv8~KYhmBbC9Ue9RO~Ytm5VDt6uLqf4Ayy1I~6Vtb91OlxqO85UOR1wv9qKzQb13CkiNHIUEDDaRUbjdpZYehCy9aj6qtYVaVHCYykMWXLiN5SdHodNQsdx9O0Smu30haQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
-    height: 200px;
+    height: 554px;
     width: 100%;
     /* Center and scale the image nicely */
     background-position: center;
@@ -478,50 +487,71 @@ input, label {
   
   /* Position the navbar container inside the image */
   .container {
-    position: absolute;
     /* margin: 20px; */
     margin-top: 0px;
-    width: 100%;
-    height: 108px;
+    position: fixed;
+    height: 95px;
     background: rgba(0, 0, 0, 0.69);
-    z-index: 1;
+    z-index: 2;
     /* FLEX BOX EXAMPLE */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    
+    max-width: 100%;
   }
   
 
   .container img{
-    width: 50%;
+    padding-top: 30px;
+    width: 60%;
+    float: left;
+    margin-left: -30px;
   }
 
   /* The navbar */
   .topnav {
-    overflow: hidden;
+    margin-top: 19px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.69);
+    width: 100%;
+    display: none;
   }
   
+  .active{
+    display: block;
+  }
+
   /* Navbar links */
   .topnav a {
     float: left;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     text-decoration: none;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    display: none;
+    flex-direction: column;
+    padding-right: 0px;
+    width: 100%;
     }
   
   .topnav a:hover {
-    background-color: #ddd;
+    background: rgba(255, 255, 255, 0.3);
     color: black;
   }
   
+
+  .topnav .contact-us{
+    padding-right: 0px;
+  }
+  
+
   #nav{
     list-style-type: none;
     margin: 0;
@@ -529,13 +559,15 @@ input, label {
   }
   
   .toggle-button{
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    width: 40px;
+    height: 24px;
     float: right;
+    padding-right: 20px;
+    padding-top: 40px;
+
   }
 
   .toggle-button .bar{
@@ -543,6 +575,42 @@ input, label {
     width: 100%;
     background-color: white;
     border-radius: 10px;
+  }
+
+  .downloadcat {
+    margin-bottom: 0px;
+    position: fixed;
+    height: 95px;
+    background: rgba(0, 0, 0, 0.69);
+    width: 100%;
+    bottom: 0;
+    display: active;
+    z-index: 2;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .downloadcat button{
+    box-sizing: border-box;
+    border: 3px solid white;
+    color: white;
+    text-transform: uppercase;  
+    background: #292929;
+    padding: 12px 32px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    max-width: 340px;
+    max-height: 50px;
+    margin-top: 20px;
+
   }
 
   .picture {
@@ -560,13 +628,13 @@ input, label {
     }
   
   .picture div{
-    padding-top: 645px;
+    padding-top: 282px;
 
   }
 
   .picture img{
     position: relative;
-    top: 40px;
+    top: 20px;
     z-index: 1;
   }
   
@@ -575,6 +643,7 @@ input, label {
     font-style: normal;
     font-weight: 900;
     font-size: 48px;
+    padding: 0%;
     }
   
   #hero {
