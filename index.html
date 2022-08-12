@@ -23,11 +23,16 @@
             <img style="float:left; padding-left: 50px;" src="Images/logo_sublight.svg" alt="">
             <!-- <img src="" alt=""> -->
         </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
         <div class="topnav">
-            <a style="padding-right: 55px;" href="#ourservices">OUR SERVICES</a>
-            <a style="padding-right: 55px;" href="#ourproducts">OUR PRODUCTS</a>
-            <a style="padding-right: 55px;" href="#aboutus">ABOUT US</a>
-            <a style="padding-right: 152px;" href="#contactus">CONTACT US</a>
+            <a style="padding-right: 55px;" href="#hero">OUR SERVICES</a>
+            <a style="padding-right: 55px;" href="#descriptionTop">OUR PRODUCTS</a>
+            <a style="padding-right: 55px;" href="#why">ABOUT US</a>
+            <a style="padding-right: 152px;" href="#lineTop">CONTACT US</a>
         </div>
     </div>
 
@@ -37,53 +42,53 @@
             <h1> <strong> take you to the top</strong></h1>
             <img src="Images/elevatorbutton.svg" alt="">    
         </div>
+        
     </section>
+    
 
-    <section class= "hero">
+    <section id= "hero">
         <div>
             <p><strong>one-stop for your elevator needs</strong></p>
-            <h1><strong>one step closer to success</strong></h1>
+            <h2><strong>one step closer to success</strong></h2>
             <br>
         </div>
         <img src="Images/whiteseparator.svg" alt="">
-        <div>
-            <img src="Images/tools.svg" alt="">
-            <img src="Images/powertool.svg" alt="">
-            <img src="Images/maintenance.svg" alt="">
+        <div id="spot">
+            <figure>
+                <img src="Images/tools.svg" alt="">
+                <figcaption>WE DESIGN</figcaption>
+            </figure> 
+            <figure>
+                <img src="Images/powertool.svg" alt="">
+                <figcaption>WE BUILD</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/maintenance.svg" alt="">
+                <figcaption>WE MAINTAIN</figcaption>
+            </figure>
         </div>
     </section>
 
-    <section class="hero2">
-        <div >
-            we design 
-        </div>
-        <div>
-            we build
-        </div>
-        <div >
-            we maintain
-        </div>
-    
-    </section>
 
-    <section class= "why">
+    <section id= "why" class="wrapper">
+
         <div  style="padding-right: 44px;">
             <h3><strong>2022 SECUREBOARDS SERIES</strong></h3>
-            <h1><strong>THE PERFECTION IN SECURITY</strong></h1><br>
+            <h1><strong>THE PERFECTION IN SECURITY</strong></h1>
             <p style="max-width: 586px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate diam placerat a et pulvinar sapien orci mauris platea. Consectetur non adipiscing duis quis leo integer adipiscing elit. Felis, cursus aenean at egestas mauris. Senectus pharetra volutpat ligula ac et. Morbi amet dignissim ipsum, in accumsan. Rhoncus in erat consectetur mi consectetur. At faucibus pellentesque et aliquet mauris. Senectus facilisi at elementum lectus non egestas. In elementum cum suspendisse quam. Congue sagittis fermentum mauris fermentum ut lectus parturient faucibus id.</p>
         </div>
-        <img style="float:right; padding-left: 44px;"; src="Images/yellowPushbkg_21.png" alt="">
+        <img src="Images/yellowPushbkg_21.png" alt="">
     </section>
 
+    <section id="descriptionTop"></section>
+
     <section class= "description">
-        <div >
+        <div class="textGroup">
             <p><strong>need more for your fleet of elevators </strong></p>
-            <h1> all our products are made </h1>
-            <h1>with heart and soul</h1><br>
+            <h1> all our products are made 
+            with heart and soul</h1><br>
             <img src="Images/separator.svg" alt="">
         </div>
-        <br>
-        <br>
         <div>
             <div class="row" >
                 <div class="card">
@@ -120,6 +125,8 @@
         
     </section>
 
+    <section id="lineTop"></section>
+
     <section class= "line">
         <div>
             <p> stay in touch with our customer service</p>
@@ -131,7 +138,7 @@
         <form>
             <div>
                 <div>
-                    <br>
+                    
                     <div class="input-container">
                         <div>
                             <label for="name">NAME *</label>
@@ -147,8 +154,8 @@
                             <label for="name">PHONE NUMBER</label>
                             <input type="text" value="0 (000) 000 -0000">     
                         </div>
-                        <div class="small-line" style="padding-left: 26px;">
-                            <label for="name">PREFERED LANGUAGE *</label>
+                        <div class="small-line" >
+                            <label for="name" style="margin-left: 30px;">PREFERED LANGUAGE *</label>
                             <select id="cars" name="cars">
                                 <option>Select</option>  
                             </select>              
@@ -164,12 +171,12 @@
     </section>
 
     <section class= "contact">
-        <strong>With your trust since 1943.</strong>
-        <img style="float:right; padding-left: 50px;" src="Images/signature.svg" alt="">
+        <p><strong> With your trust since 1943.</strong></p>
+        <img  src="Images/signature.svg" alt="">
     </section>
 
     <section class= "footer">
-        <div style="float: left;">
+        <div class="topBar" >
             <h2>UNITED STATES office
             </h2>
             <p>
@@ -182,7 +189,7 @@
                 <strong>1 999 543-4567</strong>
             </p>
         </div>
-        <div style="float: right; text-align: right;">
+        <div class="bottomBar" >
             <h2>Canada’s office</h2>
             <p>  
                 23895 bradshaw boulevard
@@ -203,7 +210,7 @@
 
 
     <!-- SCRIPTS -->
-    <script src="" async defer></script>
+    <script src="main.js" async defer></script>
 </body>
 </html>
 
